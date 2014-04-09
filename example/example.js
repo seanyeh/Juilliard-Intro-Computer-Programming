@@ -21,6 +21,11 @@ var wallX;
 var $canvas;
 var showOuch = false;
 
+var requestAnimationFrame = 
+    window.requestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.mozRequestAnimationFrame;
+
 
 // Main drawing function. Called every frame.
 function draw(){
@@ -165,11 +170,6 @@ $(document).ready(function(){
             jump();
         } catch(e){}
     });
-
-    var requestAnimationFrame = 
-        window.requestAnimationFrame ||
-        window.webkitRequestAnimationFrame ||
-        window.mozRequestAnimationFrame;
 
     requestAnimationFrame(draw);
 });
