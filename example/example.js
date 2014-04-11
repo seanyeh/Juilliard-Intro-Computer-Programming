@@ -17,7 +17,7 @@ var msLast = getMilliseconds();
 var msSinceLast = 0;
 
 var wallpng = "https://cdn0.iconfinder.com/data/icons/super-mono-reflection/red/wall_red.png";
-var wallX;
+var wallX = null;
 var $canvas;
 var showOuch = false;
 
@@ -94,7 +94,7 @@ function drawCharacter(){
 }
 
 function drawWall(){
-    if (wallX){
+    if (wallX !== null){
         $canvas.drawImage({
             source: wallpng,
             x: wallX, y: 380,
